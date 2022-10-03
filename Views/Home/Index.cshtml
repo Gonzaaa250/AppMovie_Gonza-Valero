@@ -1,0 +1,121 @@
+﻿@{
+    @* ViewData["Title"] = "Inicio"; *@
+}
+<div class="Home">
+  <div class="text-center">
+      <h1 class="display-4">Bienvenidos</h1>
+    </div>
+    @* cartelera *@
+      <div class="row align-items-center">
+      <div class="col">
+        <div class="sticky-bottom">
+    <div class="flip-container">
+      <div class="card top1a">
+         <div class="col frente">
+           <h3 class="frente">The Batman</h3></div>
+        <div class="frente">
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+      <div class="col">
+        <div class="sticky-bottom">
+    <div class="flip-container">
+      <div class="card top2a">
+        <div class="col">
+          <h3 class="frente">Black Phone</h3></div>
+        <div class="frente">
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+      <div class="col">
+        <div class="sticky-bottom">
+    <div class="flip-container">
+      <div class="card top3a">
+        <h3 class="frente">Thor: Love and Thunder</h3</div>
+        <div class="frente">
+         <div>
+        </div>
+        @* <div class="dorso top3D">
+          <h3>Black Panther</h3>
+          <p>Ver Trailer</p>
+          <button onclick="Ver3();">Ver</button>
+        </div> *@
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+  @* Titutlo Cards *@
+    <h1 class="display-4 text-center">Estrenos</h1>
+  </div>
+  @* /Titutlo Cards *@
+  @* Cards *@
+    <div class="row align-items-center">
+      <div class="col">
+        <div class="sticky-bottom">
+    <div class="flip-container">
+      <div class="card top1">
+        <div class="frente">
+         <button onclick="Ver1();">Black Adam</button> 
+        </div>
+        @* <div class="dorso top1D">
+          <h3>Black Adam</h3>
+          <p>Ver Trailer</p>
+          
+        </div> *@
+      </div>
+    </div>
+  </div>
+      </div>
+      <div class="col">
+        <div class="sticky-bottom">
+    <div class="flip-container">
+      <div class="card top2">
+        <div class="frente">
+          <button onclick="Ver2();">Avatar 2</button>
+        </div>
+        @* <div class="dorso top2D">
+          <h3>Avatar 2</h3>
+          <p>Ver Trailer</p>
+          <button onclick="Ver2();">Ver</button>
+        </div> *@
+      </div>
+    </div>
+  </div>
+      </div>
+      <div class="col">
+        <div class="sticky-bottom">
+    <div class="flip-container">
+      <div class="card top3">
+        <div class="frente">
+          <button onclick="Ver2();">Black Panther</button>
+        </div>
+        @* <div class="dorso top3D">
+          <h3>Black Panther</h3>
+          <p>Ver Trailer</p>
+          <button onclick="Ver3();">Ver</button>
+        </div> *@
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+</div>
+  @* /Cards *@
+
+
+<script>
+  function Ver1() {
+    window.location.assign("https://www.youtube.com/watch?v=6FvFxKrdbew");
+}
+function Ver2() {
+    window.location.assign("https://www.youtube.com/watch?v=jYRtFFa4hT8");
+}
+function Ver3() {
+    window.location.assign("https://www.youtube.com/watch?v=Xcc3qukGIJg");
+}
+</script>
