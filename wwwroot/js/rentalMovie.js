@@ -17,7 +17,7 @@ function AgregarPeliculas() {
                 alert("Se guardo la pelicula correctamente");
                 $("#staticBackdrop").modal("hide");
                 SearchMovieTmp();
-                Location.href = "../../Rental/Create"
+                location.href = "../../Rental/Create";
             } else {
                 alert("No se pudo agregar la pelicula, intente nuevamente");
                 console.log("No se pudo agregar la pelicula, intente nuevamente");
@@ -46,11 +46,11 @@ function CancelRental() {
     })
 }
 
-function SearchMovieTmp() {
+function SearchMovieTmp(rentalID) {
     $.ajax({
-        type: "GET",
+        type: "POST",
         url: "../../Rental/SearchMovieTmp",
-        data: {},
+        data: {RentalID: rentalID},
         success: function(ListadoMovieTmp){
             console.log(ListadoMovieTmp)
             $.each(ListadoMovieTmp, function(index, item){
@@ -58,7 +58,7 @@ function SearchMovieTmp() {
                     `<tr>
                         <th>${item.movieName}</th>
                         <th>
-                            <button class="btn botonEliminar" onclick="QuitarMovie"("${item.movieID}");>Quitar Peliculas</button>
+                            <button class="btn botonEliminar" onclick="QuitarMovie(${item.movieID});">Quitar Peliculas</button>
                         </th>
                     </tr>`
                 );
@@ -86,15 +86,16 @@ function QuitarMovie(id){
     })
 }
 
-function SearchMovie() {
+function SearchMovie(rentalID) {
+   $('#tbodypeliculas').empty();
     $.ajax({
-        type: "GET",
+        type: "POST",
         url: "../../Rental/SearchMovie",
         data: {RentalID: rentalID},
         success: function(ListadoMovie){
             // console.log(ListadoMovie)
             $.each(ListadoMovie, function(index, item){
-                $("#tbody-peliculas").append(
+                $("#tbodypeliculas").append(
                     `<tr>
                         <th>${item.movieName}</th>
                     </tr>`

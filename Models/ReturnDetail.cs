@@ -8,7 +8,7 @@ namespace AppMovie.Models
         public int ReturnDetailID { get; set; }
 
 
-        public int RentalID { get; set; }
+        public int ReturnID { get; set; }
         public virtual Return? Return { get; set; }
 
 

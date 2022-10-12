@@ -5,11 +5,11 @@ namespace AppMovie.Models
     public class Return
     {
         [Key]
-        public int RetuenID { get; set; }
+        public int ReturnID { get; set; }
 
         [Display(Name = "Fecha de devolucion")]
         [DataType(DataType.Date)]
-        public DateTime ReturnlDate { get; set; }
+        public DateTime ReturnDate { get; set; }
 
 
         [Display(Name = "Socio")]

@@ -5,14 +5,13 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using AppMovie.Models;
 
-    public class AppMovieContext : DbContext
+    public class NombreContext : DbContext
     {
-        public AppMovieContext (DbContextOptions<AppMovieContext> options)
+        public NombreContext (DbContextOptions<NombreContext> options)
             : base(options)
         {
         }
-
-        public DbSet<AppMovie.Models.Section>? Section { get; set; }
+    public DbSet<AppMovie.Models.Section>? Section { get; set; }
 
         public DbSet<AppMovie.Models.Location>? Location { get; set; }
 
@@ -34,6 +33,6 @@ using AppMovie.Models;
 
         public DbSet<AppMovie.Models.Return>? Return { get; set; }
 
-        public DbSet<AppMovie.Models.ReturnDetail>? ReturnDetail { get; set; }
+        public DbSet<AppMovie.Models.ReturnDetail>? ReturnlDetail { get; set; }
         public DbSet<AppMovie.Models.ReturndetailTemp>? ReturndetailTemp { get; set; }
     }

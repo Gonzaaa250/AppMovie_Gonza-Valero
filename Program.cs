@@ -2,6 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AppMovieContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("NombreContext") ?? throw new InvalidOperationException("Connection string 'NombreContext' not found.")));
+builder.Services.AddDbContext<AppMovieContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("AppMovieContext") ?? throw new InvalidOperationException("Connection string 'AppMovieContext' not found.")));
 
 // Add services to the container.

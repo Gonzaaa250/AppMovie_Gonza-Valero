@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] -RePelis </title>
+    <title>@ViewData["Title"] RePelis </title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/AppMovie.styles.css" asp-append-version="true" />
@@ -19,9 +19,9 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark ">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">RePelis</a>
+                <a class="navbar-brand, " asp-area="" asp-controller="Home" asp-action="Index">RePelis</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -30,9 +30,12 @@
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
-                        </li>
+                        </li>  
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Section" asp-action="Index">Secciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Movie" asp-action="Index">Peliculas</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Location" asp-action="Index">Localidad</a>
@@ -49,11 +52,12 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Gender" asp-action="Index">Generos</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Movie" asp-action="Index">Pelis</a>
-                        </li>
+ 
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Rental" asp-action="Index">Alquileres</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Return" asp-action="Index">Devolver</a>
                         </li>
                     </ul>
                 </div>
@@ -90,6 +94,9 @@
         darkmode.showWidget();
     </script> *@
     <script src="~/js/rentalMovie.js"></script>
+    
+    <script src="~/js/returnMovie.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
+    
 </body>
 </html>

@@ -1,9 +1,7 @@
-@model AppMovie.Models.Rental
+@model AppMovie.Models.Return
+
 @{
-    ViewData["Title"] = "Alquileres";
-}
-@{
-    Layout = "_Layout";
+    Layout = null;
 }
 
 <!DOCTYPE html>
@@ -15,16 +13,16 @@
 </head>
 <body>
 
-<h3>Seguro que quieres eliminar el alquiler?</h3>
+<h3>Seguro que quieres eliminar esta devolucion?</h3>
 <div>
-    <h4>Rental</h4>
+    <h4>Return</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.RentalDate)
+            @Html.DisplayNameFor(model => model.ReturnDate)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.RentalDate)
+            @Html.DisplayFor(model => model.ReturnDate)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Partner)
@@ -35,9 +33,9 @@
     </dl>
     
     <form asp-action="Delete">
-        <input type="hidden" asp-for="RentalID" />
+        <input type="hidden" asp-for="ReturnID" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Volver a la Lista</a>
+        <a asp-action="Index">Back to List</a>
     </form>
 </div>
 </body>
