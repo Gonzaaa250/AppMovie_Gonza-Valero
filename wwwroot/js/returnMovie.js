@@ -63,25 +63,7 @@ function SearchReturnTmp() {
     })
 }
 
-function QuitarMovieReturn(id){
-        const swalWithBootstrapButtons = Swal.mixin({
-            customClass: {
-            confirmButton: 'btn btn-success',
-            cancelButton: 'btn btn-danger'
-            },
-            buttonsStyling: false
-        })
-        
-        swalWithBootstrapButtons.fire({
-            title: 'Estas segur@?',
-            text: "Desea eliminar la pelicula de la devolucion?!",
-            icon: 'question',
-            showCancelButton: true,
-            confirmButtonText: 'Si, Eliminar!',
-            cancelButtonText: 'No, cancelar!',
-            reverseButtons: true
-        }).then((result) => {
-            if (result.isConfirmed) {
+function QuitarMovieReturn(id){   
                 $.ajax({
                     type: "POST",
                     url: "../../Return/QuitarMovie",
@@ -90,16 +72,10 @@ function QuitarMovieReturn(id){
                         if(resultado == true){
                             location.href = "../../Return/Create";
                         }
-                    }}),
-                swalWithBootstrapButtons.fire(
-                'Eliminado!',
-                'La pelicula se elimino de la lista',
-                'success'
-                )}
-        })
-    }
-
-function SearchMovieReturn(ReturnID) {
+                    }
+                });
+            }
+ function SearchMovieReturn(ReturnID) {
     $('#tbody-peliculasReturn').empty();
     $.ajax({
         type: "POST",
